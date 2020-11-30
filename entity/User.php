@@ -27,18 +27,9 @@ class User
 
     public function insert() 
     {
-        try {
-            $bdd = new PDO(
-                'mysql:host=localhost;dbname=rappels_php;charset=utf8'
-                , 'root'
-                , ''
-                , [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-            );
-        } catch(Exception $e) {
-            var_dump($e);
-        }
+        $db = new Db('localhost', 'rappels_php', 'root', '');
 
-        $sql = $bdd->prepare(
+        $sql = $db->prepare(
             'INSERT INTO `user` (nom, email) 
             VALUES ("' . $this->nom . '","' . $this->email . '")'
         );
