@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+use App\Core\Db;
 
 class User 
 {

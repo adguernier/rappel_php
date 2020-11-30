@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Core;
+use \PDO;
+use \Exception;
 
 class Db 
 {
