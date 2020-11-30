@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Db 
 {
     public $pdo = null;
